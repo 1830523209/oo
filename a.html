@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A</title>
+</head>
+<body>
+    <button id="add">添加数据</button>
+    <button id="link">跳转b</ button>
+    <button id="clearLocal">清空localstorage</button>
+    <button id="remove">删除</button>
+        <script>
+        var add = document.querySelector( ' #add ' );
+        var link = document.queryselector('link')
+        var clearLocal = document.querySelector( ' #clearLocal ' );
+        var remove = document.queryselector( '#remove');
+        remove.onclick = function(){
+            localStorage.removeItem('cname')
+        }
+        
+    </script>
+</body>
+</html>

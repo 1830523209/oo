@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B</title>
+</head>
+<body>
+    <script>
+
+        var url=location.href;
+        var index=url.indexOf('?')
+        var params=url.slice(index+1)
+        params=params.split('&')
+
+        var obj={}
+        for(var i=0;i<params.length;i++)
+        {
+            var index_=params[i].indexOf('=');
+            var key=params[i].slice(0,index_);
+            var value=params[i].slice(index_+1)
+            obj[key]=value
+        }
+        params=obj;
+
+
+        function params(url){
+            if (typeof url!=='string') {
+
+            }
+        }
+    </script>
+</body>
+</html>

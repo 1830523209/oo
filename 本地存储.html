@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add">添加数据</button>
+    <button id="link">跳转页面</button>
+    <script>
+    var _name='xieke'
+    var arr=[1,2]
+    var obj={a:'haha'}
+    console.log(localStorage);
+    var btn=document.querySelector('#add')[0]
+    var btn2=document.querySelector('#link')[0]
+    
+    var _name='xieke';
+    var arr=[1,2];
+    var obj={a:'haha'}
+
+    link.onclick=function(){
+        location.href='./b.html'
+    }
+
+    add.onclick=function(){
+        localStorageStorage.setItem('name',_name);
+    
+    }    
+    link.onclick=function(){
+        // localStorage.setItem(key,value)新增加
+        localStorage.setItem('cname',_name)
+
+    }
+    clearLocal.onclick=function(){
+        localStorage.clear()
+    }
+    
+ 
+    </script>
+</body>
+</html>

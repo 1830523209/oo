@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #outer{
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        #outer img{
+            width: 450px;
+            height: 450px;
+
+        }
+        
+
+
+
+    </style>
+    
+</head>
+<body>
+    <div id="outer">
+        <p id="yes"></p>
+        <img src="./图片/1.jpg" alt="">
+
+        <div class="tuut">
+            
+            <button id="pre">上一张</button>
+            <button id="netx">下一张</button>
+        </div>
+       
+    </div>
+
+    <script>
+        var tutu=document.getElementById('pre')
+        var next=document.getElementById('netx')
+        var img=document.getElementsByTagName('img')[0]
+
+        var zi=document.getElementById('yes')
+        var imgArr=["图片/2.jpg","图片/1.jpg","图片/3.jpg"]
+        var x=0;
+        zi.innerHTML="一共有"+imgArr.length+"这是第"+(x+1)+"图片"
+        tutu.onclick=function(){
+            x--
+            if(x<0)
+            {
+                x=imgArr.length-1
+            }
+            zi.innerHTML="一共有"+imgArr.length+"这是第"+(x+1)+"图片"
+            img.src=imgArr[x]
+            
+            
+        };
+
+        next.onclick=function(){
+            x++
+            if(x>imgArr.length-1)
+            {
+               x=0
+            }
+            zi.innerHTML="一共有"+imgArr.length+"这是第"+(x+1)+"图片"
+            img.src=imgArr[x]
+        
+        };
+    </script>
+
+</body>
+</html>
